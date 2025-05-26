@@ -1,37 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
       content="Web site created using create-react-app"
     />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>last.fm clone</title>
   </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<body>
+    <header class="site-header">
+        <a href="#" class="logo">last.fm</a>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+        <nav class="main-nav">
+            <a href="#">Home</a>
+            <a href="#">Live</a>
+            <a href="#">Music</a>
+            <a href="#">Charts</a>
+            <a href="#">Events</a>
+            <a href="#">Features</a>
+            <div class="search-container">
+              <button><img src="https://www.last.fm/static/images/icons/search/search_16.9c1d552b8f55.svg " alt="Search" width="20" height="20"/></button>
+              <input type="text" placeholder="Search...">
+            </div>
+        </nav>
+    </header>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    <main class="site-content">
+        <h1 class="page-title">Music</h1>
+
+        <section class="hot-artists">
+            <h2 class="section-title">Hot Right Now</h2>
+            <div class="artists-grid">
+                <div class="artist-item">
+                    <div class="artist-image" style="background-image: url('https://placecats.com/300/300')"></div>
+                    <h3 class="artist-name">Kitty West</h3>
+                    <p class="artist-genres">hip-hop · rap</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-tracks">
+            <h2 class="section-title">Popular tracks</h2>
+            <div class="track-grid">
+                <div class="track-item">
+                    <div class="track-image" style="background-image: url('https://placecats.com/150/150')"></div>
+                    <div class="track-info">
+                        <h3 class="track-title">SEXY NUKIM (feat. RM of BTS)</h3>
+                        <p class="artist-name">Balming Tiger</p>
+                        <p class="track-genres">rap · hip hop · alternative</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-sections">
+            <div class="footer-column">
+                <h3>COMPANY</h3>
+                <ul>
+                    <li>About Last.fm</li>
+                    <li>Contact Us</li>
+                    <li>Jobs</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>HELP</h3>
+                <ul>
+                    <li>Track My Music</li>
+                    <li>Community Support</li>
+                    <li>Community Guidelines</li>
+                    <li>Help</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>GOODIES</h3>
+                <ul>
+                    <li>Download Scrobbler</li>
+                    <li>Developer API</li>
+                    <li>Free Music Downloads</li>
+                    <li>Merchandise</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>ACCOUNT</h3>
+                <ul>
+                    <li>Inbox</li>
+                    <li>Settings</li>
+                    <li>Last.fm Pro</li>
+                    <li>Logout</li>
+                </ul>
+            </div>
+            <div class="footer-column social">
+                <h3>FOLLOW US</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- <script src="lastfm-api.js"></script> -->
+</body>
 </html>

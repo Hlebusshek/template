@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #ffffff;
+    color: #000000;
+}
+
+.page-title {
+    text-align: center;
+    margin: 2rem 5%;
+    font-size: 3rem;
+}
+
+.hot-artists, .popular-tracks {
+    margin: 4rem 5%;
+    display: inline;
+}
+
+.section-title {
+    text-align: center;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: #d54405;
+}
+
+.artists-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.tracks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.error-message {
+    position: fixed;
+    bottom: 20px;
+    right: -400px;
+    background: #d54405;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    opacity: 0.9;
+}
+
+.error-message.show {
+    right: 20px;
+}
+
+.loading-indicator {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #00d100;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+    display: none;
+    opacity: 0.9;
+}
+
+.results-section {
+  display: none;
+}
+
+.results-section.active {
+  display: block;
+}
+
+.top-results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.top-result-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.top-result-card h3 {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.top-result-card p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* @media (max-width: 1024px) {
+    .artist-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .track-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .track-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .track-grid {
+        grid-template-columns: 1fr;
+    }
+} */

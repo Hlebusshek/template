@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.site-footer {
+    background: #000;
+    color: #777;
+    padding: 4rem 5%;
+}
+
+.footer-sections {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+.footer-column h3 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-column li {
+    margin: 0.5rem 0;
+}
+
+.social li {
+    margin: 1rem 0;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+

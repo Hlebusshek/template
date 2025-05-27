@@ -7,8 +7,8 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background: #111;
-    color: #fff;
+    background: #ffffff;
+    color: #000000;
 }
 
 .site-header {
@@ -53,14 +53,6 @@ body {
     color: #fff;
     border-radius: 4px;
     width: 200px;
-}
-
-.search-container button {
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: not-allowed;
-    padding-right: 1rem;
 }
 
 .page-title {
@@ -115,7 +107,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.track-grid {
+.tracks-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
@@ -125,16 +117,21 @@ body {
 }
 
 .track-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 300px;
+  padding: 1rem;
+  background: #e9e9e9;
+  border-radius: 8px;
 }
 
 .track-image {
-    width: 150px;
-    height: 150px;
-    background-size: cover;
-    background-position: center;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
 }
 
 .track-info {
@@ -190,21 +187,6 @@ body {
     align-items: center;
 }
 
-.language-switcher span {
-    margin-right: 1rem;
-    cursor: pointer;
-}
-
-.copyright {
-    margin-top: 2rem;
-}
-
-.copyright ul {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
 .error-message {
     position: fixed;
     bottom: 20px;
@@ -220,6 +202,21 @@ body {
 
 .error-message.show {
     right: 20px;
+}
+
+.loading-indicator {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #00d100;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+    display: none;
+    opacity: 0.9;
 }
 
 @media (max-width: 1024px) {
@@ -246,6 +243,37 @@ body {
     .track-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
+}
+
+.results-section {
+  display: none;
+}
+
+.results-section.active {
+  display: block;
+}
+
+.top-results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.top-result-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.top-result-card h3 {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.top-result-card p {
+    font-size: 0.9rem;
+    color: #777;
 }
 
 @media (max-width: 768px) {
